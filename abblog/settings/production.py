@@ -4,6 +4,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = False
 
+ALLOWED_HOSTS = ['adriaanb.herokuapp.com']
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 INSTALLED_APPS = [
