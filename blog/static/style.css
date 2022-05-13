@@ -2,6 +2,23 @@
   border: 1px solid gold;
 } */
 
+:root {
+  --color-bg: #0e0e0e;
+  --color-fg: rgb(217, 217, 217);
+  --color-card: rgba(77, 77, 77, 0.1);
+  --color-subtitle: rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: rgb(255, 247, 247);
+    --color-fg: #0e0e0e;
+    --color-card: rgba(77, 77, 77, 0.1);
+    --color-subtitle: rgba(0, 0, 0, 0.1);
+  }
+}
+
+
 body {
   margin: 0px;
   display: flex;
@@ -9,14 +26,14 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   justify-content: center;
-  background-color: #0e0e0e;
-  color: rgb(217, 217, 217);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
 }
 
 #welcome {
-  margin-top: 15vh;
+  max-width: 900px;
   text-align: center;
-  margin-bottom: 60px;
+  margin: 15vh auto 60px;
 }
 
 #intro {
@@ -27,11 +44,11 @@ body {
 #about {
   font-size: medium;
   padding: 10px 20px;
-  background-color: rgba(77, 77, 77, 0.1);
+  background-color: var(--color-card);
 }
 
 #about-text {
-  background-color: rgba(77, 77, 77, 0.1);
+  background-color: var(--color-card);
   padding: 20px;
 }
 
@@ -44,7 +61,7 @@ body {
   top: 5%;
   left: 50%;
   transform: translate(-50%, 0);
-  color: rgba(255, 255, 255, 0.1);
+  color: var(--color-subtitle);
 }
 
 h1 {
@@ -73,7 +90,7 @@ main {
 }
 
 .blog-item {
-  background-color: rgba(77, 77, 77, 0.1);
+  background-color: var(--color-card);
   padding: 20px;
   text-align: left;
   justify-items: left;
