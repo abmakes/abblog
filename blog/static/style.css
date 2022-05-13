@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 /* * {
   border: 1px solid gold;
 } */
@@ -67,6 +68,11 @@ body {
 h1 {
   font-size: 33px;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
