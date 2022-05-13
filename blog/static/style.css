@@ -7,6 +7,7 @@
   --color-bg: #0e0e0e;
   --color-fg: rgb(217, 217, 217);
   --color-card: rgba(77, 77, 77, 0.1);
+  --color-code: rgba(172, 172, 172, 0.1);
   --color-subtitle: rgba(255, 255, 255, 0.1);
 }
 
@@ -15,6 +16,7 @@
     --color-bg: rgb(255, 247, 247);
     --color-fg: #0e0e0e;
     --color-card: rgba(77, 77, 77, 0.1);
+    --color-code: rgba(172, 172, 172, 0.3);
     --color-subtitle: rgba(0, 0, 0, 0.1);
   }
 }
@@ -55,14 +57,28 @@ body {
 
 #subtitle {
   position: absolute;
-  font-size: 120px;
+  font-size: 40px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: heavy;
   /* left: 30%; */
-  top: 5%;
+  top: 14.5%;
   left: 50%;
   transform: translate(-50%, 0);
   color: var(--color-subtitle);
+}
+
+@media screen and (min-width: 401px) {
+  #subtitle {
+    top: 12%;
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 841px) {
+  #subtitle {
+    top: 5%;
+    font-size: 120px;
+  }
 }
 
 h1 {
@@ -120,3 +136,12 @@ a:hover {
 .anchor {
   padding-top: 20vh;
 }
+
+pre {
+  display: block;
+  overflow-x: scroll;
+  background-color: var(--color-code);
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+} 
